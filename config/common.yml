@@ -1,0 +1,25 @@
+services:
+  demodeprecated.module:
+    class: 'DemoDeprecated'
+    factory: ['Module', 'getInstanceByName']
+    public: true
+    arguments:
+      - 'demodeprecated'
+
+  demodeprecated.module.shop_context:
+    class: 'PrestaShop\Module\DemoDeprecated\ShopContext'
+    public: true
+
+  demodeprecated.module.version_checker:
+    class: 'PrestaShop\Module\DemoDeprecated\VersionChecker'
+    public: true
+
+  demodeprecated.module.adapter.price_formatter:
+    class: PrestaShop\Module\DemoDeprecated\Adapter\PriceFormatterAdapter
+    public: true
+    arguments:
+      - '@demodeprecated.module.shop_context'
+      - '@demodeprecated.module.version_checker'
+      - '=@demodeprecated.module.shop_context.getCurrency()'
+
+
