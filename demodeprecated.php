@@ -72,13 +72,19 @@ class DemoDeprecated extends Module
     {
         $priceFormatter = $this->getService('demodeprecated.module.adapter.price_formatter');
 
-        dump($priceFormatter->format(12.34));
+        echo '<pre>';
+        print_r($priceFormatter->format(12.34)).PHP_EOL;
 
-        dump('Different currency:');
-        dump(
-            $priceFormatter
-                ->setCurrency(new Currency(2))
-                ->format(12.34)
-        );
+        $secondCurrency = new Currency(2);
+        if (Validate::isLoadedObject($secondCurrency)) {
+            print_r('Different currency:').PHP_EOL;
+            print_r(
+                $priceFormatter
+                    ->setCurrency($secondCurrency)
+                    ->format(12.34)
+            );
+        }
+        
+        echo '</pre>';
     }
 }
