@@ -20,6 +20,3 @@ services:
     arguments:
       - '@demodeprecated.module.shop_context'
       - '@demodeprecated.module.version_checker'
-      - '=@demodeprecated.module.shop_context.getCurrency()'
-
-
