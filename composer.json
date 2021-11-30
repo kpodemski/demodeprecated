@@ -2,7 +2,7 @@
   "name": "kpodemski/demodeprecated",
   "description": "Demo of how to deal with a deprecated methods",
   "homepage": "https://github.com/kpodemski/demodeprecated",
-  "license": "MIT",
+  "license": "AFL-3.0",
   "authors": [
     {
       "name": "Krystian Podemski"

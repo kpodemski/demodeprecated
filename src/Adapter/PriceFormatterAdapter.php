@@ -41,7 +41,7 @@ class PriceFormatterAdapter
     }
 
     /**
-     * Tools::displayPrice() is removed in v8, we ned to handle old versions of PrestaShop here
+     * Tools::displayPrice() is removed in v8, we need to handle old versions of PrestaShop here
      * 
      * @param float $price
      * 
