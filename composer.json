@@ -1,0 +1,24 @@
+{
+  "name": "kpodemski/demodeprecated",
+  "description": "Demo of how to deal with a deprecated methods",
+  "homepage": "https://github.com/kpodemski/demodeprecated",
+  "license": "AFL-3.0",
+  "authors": [
+    {
+      "name": "Krystian Podemski"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PrestaShop\\Module\\DemoDeprecated\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "prestashop/module-lib-service-container": "^1.4"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false
+  }
+}
